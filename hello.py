@@ -71,3 +71,24 @@ file = open('readme.md',"r")
 data = file.read()
 file.close()
 print(data)
+
+# thao tac với list 
+obj_a =['A','B','C']
+obj_b =["V","G","W"]
+print(obj_a)
+obj_a.append(['C','D'])
+print("append khong push nhieu thang vao duoc ma no push nguyen[..,..] vao luon", obj_a)
+print(len(obj_a))
+is_D = obj_a[len(obj_a)-1][1]
+print(is_D)
+
+obj_a.extend(obj_b)
+print(obj_a)
+value_delete = 'C'
+try:
+    index = obj_a[3].remove(value_delete)
+    print("index: ",index)
+except:
+    ValueError: print('is not value: ', value_delete)
+print(obj_a)
+
